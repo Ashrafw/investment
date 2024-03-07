@@ -5,17 +5,16 @@ import {
   Legend,
   Pie,
   PieChart,
-  PieLabel,
-  ResponsiveContainer,
-  Tooltip,
+  // PieLabel,
+  // ResponsiveContainer,
+  // Tooltip,
 } from "recharts";
 
 type Props = { data: GraphDataType };
 
 export default function PieChartComponent({ data }: Props) {
-  const COLOURS = ["#3b6df6", "#ae7b15", "#0b7f1c", "#b53bf6", "#f63b5a"];
-  const [keys, setKeys] = useState(Object.keys(data[0]));
-  console.log("data piechart==>", data);
+  // const COLOURS = ["#3b6df6", "#ae7b15", "#0b7f1c", "#b53bf6", "#f63b5a"];
+  // const [keys, setKeys] = useState(Object.keys(data[0]));
   return (
     <div className=" flex items-start justify-center">
       <PieChart width={380} height={300}>
@@ -28,7 +27,7 @@ export default function PieChartComponent({ data }: Props) {
           outerRadius={120}
           dataKey="value"
         >
-          {data.map((entry, index) => (
+          {data.map((_, index) => (
             <Cell key={`cell-${index}`} fill={contrastColors[index]} />
           ))}
         </Pie>
@@ -54,8 +53,8 @@ const renderCustomizedLabel = ({
   innerRadius,
   outerRadius,
   percent,
-  index,
-}: LabelType) => {
+}: // index,
+LabelType) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy + radius * Math.sin(-midAngle * RADIAN);

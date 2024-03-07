@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { GraphDataType, contrastColors } from "../../util/data";
 import {
   CartesianGrid,
@@ -14,7 +14,7 @@ import {
 type Props = { data: GraphDataType };
 
 export default function LineChartComponent({ data }: Props) {
-  const [keys, setKeys] = useState(Object.keys(data[0]));
+  const [keys, _] = useState(Object.keys(data[0]));
   console.log("data line", data);
   console.log("data[0] ", data[0]);
   console.log("keys", keys);
@@ -41,8 +41,6 @@ export default function LineChartComponent({ data }: Props) {
             strokeWidth={3}
           />
         ))}
-        {/* <Line type="monotone" dataKey="revenue" stroke="#3b82f6" />
-          <Line type="monotone" dataKey="profit" stroke="#8b5cf6" /> */}
       </LineChart>
     </ResponsiveContainer>
   );
