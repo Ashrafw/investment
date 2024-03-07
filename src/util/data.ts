@@ -88,7 +88,7 @@ export const investmentData: PerformanceData[] = [
         ],
       },
       {
-        title: "Allocation",
+        title: "Current Allocations",
         graphData: [
           {
             name: "Microsoft",
@@ -208,7 +208,7 @@ export const investmentData: PerformanceData[] = [
         ],
       },
       {
-        title: "Allocation",
+        title: "Current Allocations",
         graphData: [
           {
             name: "IBM",
@@ -321,7 +321,7 @@ export const investmentData: PerformanceData[] = [
         ],
       },
       {
-        title: "Allocation",
+        title: "Current Allocations",
         graphData: [
           {
             name: "Facebook",

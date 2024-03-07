@@ -16,7 +16,7 @@ export default function DisplayComp({ invest, isTrend }: Props) {
   useEffect(() => {
     if (invest.title === "Performance") {
       setGraph("bar");
-    } else if (invest.title === "Allocation") {
+    } else if (invest.title === "Current Allocations") {
       setGraph("pie");
     } else {
       setGraph("line");
@@ -34,7 +34,7 @@ export default function DisplayComp({ invest, isTrend }: Props) {
         <GraphSelection
           graph={graph}
           setGraph={setGraph}
-          isPieChartOnly={invest.title === "Allocation"}
+          isPieChartOnly={invest.title === "Current Allocations"}
         />
       </div>
       <div className="w-full h-full p-4 pb-10">
