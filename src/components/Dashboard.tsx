@@ -7,7 +7,6 @@ type Props = {
 };
 
 export default function Dashboard({ data }: Props) {
-  console.log("PerformanceData", data);
   return (
     <div>
       <h1 className="text-3xl mb-4 font-bold"> {data.investmentTitle}</h1>

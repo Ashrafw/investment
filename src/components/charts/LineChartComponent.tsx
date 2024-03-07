@@ -15,9 +15,7 @@ type Props = { data: GraphDataType };
 
 export default function LineChartComponent({ data }: Props) {
   const [keys, _] = useState(Object.keys(data[0]));
-  console.log("data line", data);
-  console.log("data[0] ", data[0]);
-  console.log("keys", keys);
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
-import Dashboard from "./comp/Dashboard";
-import FundSelection from "./comp/FundSelection";
+import Dashboard from "./components/Dashboard";
+import FundSelection from "./components/FundSelection";
 import { PerformanceData, investmentData } from "./util/data";
 
 function App() {
@@ -11,8 +11,6 @@ function App() {
   useEffect(() => {
     setData(investmentData);
   }, [investmentData]);
-  console.log(" data ", data);
-  console.log("selectedInvestment", selectedInvestment);
   return (
     <div className="min-h-screen min-w-screen">
       <Navbar />
