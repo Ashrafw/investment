@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { GraphDataType, contrastColors } from "../../util/data";
 import {
   Cell,
