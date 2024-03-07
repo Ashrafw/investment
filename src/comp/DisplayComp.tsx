@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { GraphDataType, PerformanceData, PerformanceType } from "../util/data";
+import { useEffect, useState } from "react";
+import { PerformanceType } from "../util/data";
 import GraphSelection from "./GraphSelection";
 import BarChartComponent from "./charts/BarChartComponent";
 import LineChartComponent from "./charts/LineChartComponent";

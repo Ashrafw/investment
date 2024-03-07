@@ -14,7 +14,7 @@ import { useState } from "react";
 type Props = { data: GraphDataType };
 
 export default function BarChartComponent({ data }: Props) {
-  const [keys, setKeys] = useState(Object.keys(data[0]));
+  const [keys, _] = useState(Object.keys(data[0]));
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart
@@ -37,7 +37,6 @@ export default function BarChartComponent({ data }: Props) {
             fill={contrastColors[index]}
           />
         ))}
-        {/* <Bar dataKey="profit" fill="#8b5cf6" /> */}
       </BarChart>
     </ResponsiveContainer>
   );
