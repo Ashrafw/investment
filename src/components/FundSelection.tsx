@@ -1,6 +1,7 @@
 import React, { SetStateAction } from "react";
 import { PerformanceData } from "../util/data";
 import { FolderOpen } from "lucide-react";
+import { v4 as uuid } from "uuid";
 
 type Props = {
   data: PerformanceData[];
@@ -22,6 +23,7 @@ export default function FundSelection({
       <div className="grid grid-cols-3 gap-4">
         {data.map((invest, index) => (
           <button
+            key={uuid()}
             className={` p-2 ${
               index === selectedInvestment ? " bg-cyan-600" : " bg-gray-800"
             } rounded font-semibold text-lg`}

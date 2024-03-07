@@ -1,19 +1,9 @@
 import { GraphDataType, contrastColors } from "../../util/data";
-import {
-  Cell,
-  Legend,
-  Pie,
-  PieChart,
-  // PieLabel,
-  // ResponsiveContainer,
-  // Tooltip,
-} from "recharts";
+import { Cell, Legend, Pie, PieChart } from "recharts";
 
 type Props = { data: GraphDataType };
 
 export default function PieChartComponent({ data }: Props) {
-  // const COLOURS = ["#3b6df6", "#ae7b15", "#0b7f1c", "#b53bf6", "#f63b5a"];
-  // const [keys, setKeys] = useState(Object.keys(data[0]));
   return (
     <div className=" flex items-start justify-center">
       <PieChart width={380} height={300}>
